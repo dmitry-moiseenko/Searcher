@@ -51,7 +51,12 @@ public class Main {
 
     }
 
-
+    public static void eraseFile(String direct){
+        File myFile = new File(direct);
+        if (myFile.exists()) {
+            myFile.delete();
+        }
+    }
 
 
     public static void compare (File direct, File received) throws Exception{
@@ -68,12 +73,7 @@ public class Main {
         }
     }
 
-    public static void eraseFile(String direct){
-        File myFile = new File(direct);
-        if (myFile.exists()) {
-            myFile.delete();
-        }
-    }
+
 
 }
 
